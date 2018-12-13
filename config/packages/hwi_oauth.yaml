@@ -1,0 +1,11 @@
+hwi_oauth:   
+    firewall_names: [secured_area]
+    resource_owners:
+        azure:
+            type:                azure            
+            client_id:           "%env(AZURE_CLIENT_ID)%"
+            client_secret:       "%env(AZURE_CLIENT_SECRET)%"
+            
+            options:
+                resource:   https://graph.windows.net
+                application: common
